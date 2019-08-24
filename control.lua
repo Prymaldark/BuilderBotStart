@@ -8,21 +8,21 @@ script.on_event(defines.events.on_player_created, function(event)
 
 	}
 	armor = {
-		{"fusion-reactor-equipment"},
-		{"fusion-reactor-equipment"},
-		{"fusion-reactor-equipment"},
-		{"fusion-reactor-equipment"},
-		{"exoskeleton-equipment"},
 		{"personal-roboport-mk2-equipment"},
 		{"personal-roboport-mk2-equipment"},
 		{"personal-roboport-mk2-equipment"},
 		{"personal-roboport-mk2-equipment"},
+		{"fusion-reactor-equipment"},
+		{"fusion-reactor-equipment"},
+		{"fusion-reactor-equipment"},
+		{"fusion-reactor-equipment"},
 		{"battery-mk2-equipment"},
 		{"battery-mk2-equipment"},
 		{"battery-mk2-equipment"},
-		{"night-vision-equipment"},
-		{"belt-immunity-equipment"},
 		{"solar-panel-equipment"},
+		{"belt-immunity-equipment"},
+		{"night-vision-equipment"},
+		{"exoskeleton-equipment"},
 	}
 
 	local player = game.players[event.player_index]
