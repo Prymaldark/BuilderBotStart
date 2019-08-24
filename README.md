@@ -1,4 +1,4 @@
-Are you tired of building a starter base to research bots only to tear it down while waiting too long for bots to recharge? Uber Bot Start lets you start with construction bots in a Vanilla+ way. You'll start with:
+Are you tired of building a starter base to research bots only to tear it down while waiting too long for bots to recharge? Builder Bot Start lets you start with construction bots in a Vanilla+ way. You'll start with:
 
 * Power armor Mk.2
 * 100 construction robots
