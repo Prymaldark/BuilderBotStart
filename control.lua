@@ -22,7 +22,7 @@ script.on_event(defines.events.on_player_created, function(event)
 		{"battery-mk2-equipment"},
 		{"night-vision-equipment"},
 		{"belt-immunity-equipment"},
-		{"portable-solar-panel"},
+		{"solar-panel-equipment"},
 	}
 
 	local player = game.players[event.player_index]
