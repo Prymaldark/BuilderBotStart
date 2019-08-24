@@ -4,12 +4,13 @@ Are you tired of building a starter base to research bots only to tear it down w
 * 100 construction robots
 * 4 personal roboport Mk.2
 * 4 portable fusion reactors
-* 4 battery Mk.2
+* 3 battery Mk.2
 * Exoskeleton
 * Night vision goggles
-* 1000 iron plates
-* 500 copper plates
+* Belt Immunity
+* Portable Solar Panel
+
 
 No technology is unlocked. No existing items are changed. No new items are added.
 
-Originally forked from [Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then again from [OneBit](https://mods.factorio.com/mods/onebit/AdequateBotStart), and then again from [ZeroSerenity] (https://mods.factorio.com/mod/MegaBotStart) Added iron and copper plates
+Originally forked from [Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then again from [OneBit](https://mods.factorio.com/mods/onebit/AdequateBotStart), and then again from [ZeroSerenity] (https://mods.factorio.com/mod/MegaBotStart), and again from [afaulconbridge] (https://github.com/afaulconbridge/UberBotStart).
