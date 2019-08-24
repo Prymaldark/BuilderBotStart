@@ -1,11 +1,11 @@
 {
-    "name": "UberBotStart",
-    "version": "0.1.3",
+    "name": "BuilderBotStart",
+    "version": "0.1.0",
     "factorio_version": "0.17",
     "dependencies": [ "base >= 0.17" ],
-    "title": "Uber Bot Start",
-    "author": "Primogenitor",
-    "contact": "",
-    "homepage": "",
-    "description": "Are you tired of building a starter base to research bots only to tear it down while waiting too long for bots to recharge? Uber Bot Start lets you start with construction bots in a Vanilla+ way."
+    "title": "Builder Bot Start",
+    "author": "Prymaldark",
+    "contact": "github.com/Prymaldark",
+    "homepage": "github.com/Prymaldark/BuilderBotStart",
+    "description": "Are you tired of building a starter base to research bots only to tear it down while waiting too long for bots to recharge? Builder Bot Start lets you start with construction bots in a Vanilla+ way."
 }
