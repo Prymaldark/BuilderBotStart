@@ -13,4 +13,4 @@ Are you tired of building a starter base to research bots only to tear it down w
 
 No technology is unlocked. No existing items are changed. No new items are added.
 
-Originally forked from [Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then again from [OneBit](https://mods.factorio.com/mods/onebit/AdequateBotStart), and then again from [ZeroSerenity](https://mods.factorio.com/mod/MegaBotStart), and again from [afaulconbridge](https://github.com/afaulconbridge/UberBotStart).
+Originally forked from [Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then [OneBit](https://mods.factorio.com/mods/onebit/AdequateBotStart), then [ZeroSerenity](https://mods.factorio.com/mod/MegaBotStart), and [afaulconbridge](https://github.com/afaulconbridge/UberBotStart).
