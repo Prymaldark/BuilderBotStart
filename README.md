@@ -13,14 +13,14 @@ Upgrade your engineer with Builder Bot Start. Begin the game with construction b
 
 Now includes several user configurable options, and support for Industrial Revolution.
 Options include:
-* Construction Robots quantity
-* Repair Kits quantity
-* When Industrial Revolution is active
-* * Choose your repair kit type.
-* * Use Clockwork Punkbots.
-* * Starting fuel for your personal reactors.
-* * Begin with a Monowheel.
-* * * Start with fuel for your sweet ride.
+Construction Robots quantity
+Repair Kits quantity
+When Industrial Revolution is active
+* Choose your repair kit type.
+* Use Clockwork Punkbots.
+* Starting fuel for your personal reactors.
+* Begin with a Monowheel.
+  * Start with fuel for your sweet ride.
 
 No technology is unlocked. No existing items are changed. No new items are added.
 
