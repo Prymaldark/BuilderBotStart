@@ -20,9 +20,9 @@ Options include:
 * Repair Kits quantity
 * When Industrial Revolution is active
   * Choose your repair kit type.
-  * Use Clockwork Punkbots or standard Construction Robots.
+  * Choose between starting with Clockwork Punkbots or standard Construction Robots.
   * Select how much fuel for your personal reactors you will start with.
-  * Begin with a Monowheel.
+  * Choose to get rolling immediately, with a Monowheel at the start.
     * Start with fuel, of customizable type and quantity, for your sweet ride.
 
 No technology is unlocked. No existing items are changed. No new items are added.
