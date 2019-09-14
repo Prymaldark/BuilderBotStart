@@ -16,11 +16,11 @@ Options include:
 * Construction Robots quantity
 * Repair Kits quantity
 * When Industrial Revolution is active
-** Choose your repair kit type.
-** Use Clockwork Punkbots.
-** Starting fuel for your personal reactors.
-** Begin with a Monowheel.
-** * Start with fuel for your sweet ride.
+* * Choose your repair kit type.
+* * Use Clockwork Punkbots.
+* * Starting fuel for your personal reactors.
+* * Begin with a Monowheel.
+* * * Start with fuel for your sweet ride.
 
 No technology is unlocked. No existing items are changed. No new items are added.
 
