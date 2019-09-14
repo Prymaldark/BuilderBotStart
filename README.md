@@ -10,7 +10,7 @@ Upgrade your engineer with Builder Bot Start. Begin the game with construction b
   * Night vision goggles
   * Belt Immunity
   * Portable Solar Panel
-*Inventory
+* Inventory
   * Construction Robots
   * Repair Kits
 
