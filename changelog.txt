@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2019.09.14
+  Changes:
+    - Added support for Industrial Revolution.
+    - Added settings entries for customization of starting loadout.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2019.08.24
+  Changes:
+    - Added thumbnail for mod portal.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2019.08.24
+  Info:
+    - Initial release
+    - forked from github.com/afaulconbridge/UberBotStart
