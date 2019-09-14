@@ -27,4 +27,4 @@ Options include:
 
 No technology is unlocked. No existing items are changed. No new items are added.
 
-Originally forked from [Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then [OneBit's AdequateBotStart](https://mods.factorio.com/mods/onebit/AdequateBotStart), and [ZeroSerenity's MegaBotStart](https://mods.factorio.com/mod/MegaBotStart), and [afaulconbridge's UberBotStart](https://github.com/afaulconbridge/UberBotStart).
+Originally forked from [Peppe's Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then [OneBit's AdequateBotStart](https://mods.factorio.com/mods/onebit/AdequateBotStart), and [ZeroSerenity's MegaBotStart](https://mods.factorio.com/mod/MegaBotStart), and [afaulconbridge's UberBotStart](https://github.com/afaulconbridge/UberBotStart).
