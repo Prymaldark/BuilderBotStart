@@ -1,15 +1,15 @@
 Upgrade your engineer with Builder Bot Start. Begin the game with construction bots from the moment you begin to allow your focus to be your factory. You did not crash here, you came with a purpose. The factory must grow. This loadout is focused on building, and does not include military features. You'll start with:
 
-*Armor
-* Power armor Mk.2
-*Equipment
-* 4 personal roboport Mk.2
-* 4 portable fusion reactors
-* 3 battery Mk.2
-* Exoskeleton
-* Night vision goggles
-* Belt Immunity
-* Portable Solar Panel
+* Armor
+  * Power armor Mk.2
+* Equipment
+  * 4 personal roboport Mk.2
+  * 4 portable fusion reactors
+  * 3 battery Mk.2
+  * Exoskeleton
+  * Night vision goggles
+  * Belt Immunity
+  * Portable Solar Panel
 *Inventory
   * Construction Robots
   * Repair Kits
