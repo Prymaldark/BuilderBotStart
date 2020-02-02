@@ -1,7 +1,7 @@
 {
     "name": "BuilderBotStart",
-    "version": "0.2.0",
-    "factorio_version": "0.17",
+    "version": "0.2.1",
+    "factorio_version": "0.18",
     "dependencies": [ 
 		"base >= 0.17",
 		"?IndustrialRevolution >= 0.9.99"
@@ -10,5 +10,5 @@
     "author": "Prymaldark",
     "contact": "github.com/Prymaldark",
     "homepage": "github.com/Prymaldark/BuilderBotStart",
-    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots in a Vanilla+ way. This loadout is focused on building, and does not include military features.\nNow includes a few user configurable startup options, and support for Industrial Revolution."
+    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots so you may concern yourself more with the design than construction of your base. This loadout is focused on building, and does not include explicitly military features.\nNow includes a few user configurable startup options, and support for v0.18."
 }
