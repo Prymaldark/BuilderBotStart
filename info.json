@@ -4,11 +4,12 @@
     "factorio_version": "0.18",
     "dependencies": [ 
 		"base >= 0.17",
+		"?Krastorio2 >= 0.9.9",
 		"?IndustrialRevolution >= 0.9.99"
 	],
     "title": "Builder Bot Start",
     "author": "Prymaldark",
     "contact": "github.com/Prymaldark",
     "homepage": "github.com/Prymaldark/BuilderBotStart",
-    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots so you may concern yourself more with the design than construction of your base. This loadout is focused on building, and does not include explicitly military features.\nNow includes a few user configurable startup options, and support for v0.18."
+    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots so you may concern yourself more with the design than construction of your base. This loadout is focused on building, and does not include explicitly military features.\nIncludes user configurable startup options, and support for Krastorio 2."
 }
