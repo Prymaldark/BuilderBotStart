@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2020.09.07
+  Changes:
+    - Updated for Factorio v1.0 (Thanks to code from ZeroSerenity's MegaBotStart)
+    - Removed support for Industrial Revolution and Krastorio 2
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2020.04.12
   Changes:

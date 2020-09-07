@@ -12,19 +12,9 @@ Upgrade your engineer with Builder Bot Start. Begin the game with construction b
   * Portable Solar Panel
 * Inventory
   * Construction Robots
-  * Repair Kits
+
+Mod settings include number of construction robots to begin with, as well as the choice of increasing robot speed.
 
 Now includes several user configurable options, and support for Industrial Revolution.
-Options include:
-* Construction Robots quantity
-* Repair Kits quantity
-* When Industrial Revolution is active
-  * Choose your repair kit type.
-  * Choose between starting with Clockwork Punkbots or standard Construction Robots.
-  * Select how much fuel for your personal reactors you will start with.
-  * Choose to get rolling immediately, with a Monowheel at the start.
-    * Start with fuel, of customizable type and quantity, for your sweet ride.
 
-No technology is unlocked. No existing items are changed. No new items are added.
-
-Originally forked from [Peppe's Peppe Bot Start](https://mods.factorio.com/mods/Peppe/PeppeBotStart), then [OneBit's AdequateBotStart](https://mods.factorio.com/mods/onebit/AdequateBotStart), and [ZeroSerenity's MegaBotStart](https://mods.factorio.com/mod/MegaBotStart), and [afaulconbridge's UberBotStart](https://github.com/afaulconbridge/UberBotStart).
+Code rework for Factorio v1.0 largely thanks to [ZeroSerenity's MegaBotStart](https://mods.factorio.com/mod/MegaBotStart).
