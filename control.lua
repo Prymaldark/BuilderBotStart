@@ -1,88 +1,77 @@
-script.on_event(defines.events.on_player_created, function(event)
-	local items
-	local armor
+local ItemPrototypes = {
+	Armor = "power-armor-mk2",
+	Robot = "construction-robot",
+	Fuel = "",
+	Reactor = "fusion-reactor-equipment", --4x4
+	Exoskeleton = "exoskeleton-equipment", --2x4
+	Shield = "energy-shield-mk2-equipment", --2x2
+	Roboport = "personal-roboport-mk2-equipment", --2x2
+	Battery = "battery-mk2-equipment", --1x2
+	LaserDefense = "personal-laser-defense-equipment", --2x2	
+	Nightvision = "night-vision-equipment", --2x2
+	Panel = "solar-panel-equipment", --1x1
+	Immunity = "belt-immunity-equipment", --1x1
+}
 
-	if (game.active_mods["Krastorio2"]) then 
-		items = {
-			{settings.startup["Armor-type"].value, 1},
-		}
-	else
-		items = {
-			{"power-armor-mk2", 1},
-		}
-	end
+local Items = {{ItemPrototypes["Robot"], settings.global["starting robot count"].value}}
+local ArmorModules = {
+	--Vanilla, 10x10 grid
+	{Name = ItemPrototypes["Roboport"], Count = 4},
+	{Name = ItemPrototypes["Reactor"], Count = 4},
+	{Name = ItemPrototypes["Battery"], Count = 3},
+	{Name = ItemPrototypes["Panel"], Count = 1},
+	{Name = ItemPrototypes["Immunity"], Count = 1},
+	{Name = ItemPrototypes["Nightvision"], Count = 1},
+	{Name = ItemPrototypes["Exoskeleton"], Count = 1},
+}
 
-
-	if (game.active_mods["Krastorio2"]) then 
-		armor = {
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
---			{settings.startup["Battery-type"].value, settings.startup["Battery-count"].value}, 
---			{settings.startup["Reactor-type"].value, settings.startup["Reactor-count"].value},
---			{settings.startup["Exoskel-type"].value, settings.startup["Exoskel-count"].value},
---			{settings.startup["Vision-type"].value, settings.startup["Vision-count"].value},
---			{settings.startup["Panel-type"].value, settings.startup["Panel-count"].value},
-			{"belt-immunity-equipment"},	
-		}
-	else
-		armor = {
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
-			{"personal-roboport-mk2-equipment"},
-			{"fusion-reactor-equipment"},
-			{"fusion-reactor-equipment"},
-			{"fusion-reactor-equipment"},
-			{"fusion-reactor-equipment"},
-			{"battery-mk2-equipment"},
-			{"battery-mk2-equipment"},
-			{"battery-mk2-equipment"},
-			{"solar-panel-equipment"},
-			{"belt-immunity-equipment"},
-			{"night-vision-equipment"},
-			{"exoskeleton-equipment"},		
-		}
-	end
-	
-	if (game.active_mods["IndustrialRevolution"] and settings.startup["Use-steambots"].value) then
-		if (settings.startup["Construction-robots-count"].value > 0) then items[#items+1]={"steambot", settings.startup["Construction-robots-count"].value} end
-	else
-		if (settings.startup["Construction-robots-count"].value > 0) then items[#items+1]={"construction-robot", settings.startup["Construction-robots-count"].value} end
-	end
-	
--- only if Krastorio2 is active:
-	if (game.active_mods["Krastorio2"]) then 
-		items[#items+1]={settings.startup["Reactor-fuel-type"].value, settings.startup["Reactor-fuel-count"].value} 
-		items[#items+1]={settings.startup["Battery-type"].value, settings.startup["Battery-count"].value}
-		items[#items+1]={settings.startup["Reactor-type"].value, settings.startup["Reactor-count"].value}
-		items[#items+1]={settings.startup["Exoskel-type"].value, settings.startup["Exoskel-count"].value}
-		items[#items+1]={settings.startup["Vision-type"].value, 1}
-		items[#items+1]={settings.startup["Panel-type"].value, settings.startup["Panel-count"].value}	
-	end
--- only if Industrial Revolution is present:
-	if game.active_mods["IndustrialRevolution"] then
-		if (settings.startup["Repair-tool-count"].value > 0) then items[#items+1]={settings.startup["Repair-tool-type"].value, settings.startup["Repair-tool-count"].value} end
-		if (settings.startup["Uranium-fuel-count"].value > 0) then items[#items+1]={"uranium-fuel-cell", settings.startup["Uranium-fuel-count"].value} end
-		if settings.startup["Monowheel"].value then 
-			items[#items+1] = {"monowheel", 1}
-			if (settings.startup["Wheel-fuel-count"].value > 0) then items[#items+1] = {settings.startup["Wheel-fuel-type"].value, settings.startup["Wheel-fuel-count"].value} end
+--Freeplay
+script.on_init(function(event)
+	if not(settings.global["faster robots"].value == 0) then
+		for k,v in pairs(game.forces) do
+			for z = 1, settings.global["faster robots"].value, 1 do
+				v.technologies["worker-robots-speed-" .. tostring(z)].researched = true
+			end
 		end
-	else 
-		if (settings.startup["Repair-tool-count"].value > 0) then items[#items+1]={"repair-pack", settings.startup["Repair-tool-count"].value} end
 	end
-		
+end)
 
+
+function EquipArmor(event)
+	local Player = game.players[event.player_index]
+	local ArmorInventory = Player.get_inventory(defines.inventory.character_armor)
 	
-	local player = game.players[event.player_index]
-	for i, v in pairs(items) do
-		player.insert{name = v[1], count = v[2]}
+	if not(ArmorInventory == nil) then --If the player doesn't have armor inventory, the player hasn't spawned, so we can skip this round.
+		for i, v in pairs(Items) do
+			Player.insert{name = v[1], count = v[2]}
+		end
+		if not(ArmorInventory.is_empty()) then
+			--We want to remove whatever armor they had to slot in what we want.
+			local CurrentArmor = ArmorInventory[1].name
+			ArmorInventory.clear()
+			--Then for good measure we destroy it from the inventory.
+			local PlayerInventory = Player.get_inventory(defines.inventory.character_main)
+			PlayerInventory.remove(CurrentArmor);
+		end
+		local n = 0
+		n = ArmorInventory.insert{name=ItemPrototypes["Armor"],count=1}
+		if(n > 0)then -- we actually equipped the armor
+			local grid=ArmorInventory[1].grid
+			for i,module in pairs(ArmorModules) do
+				for y = 1, module.Count, 1 do
+					grid.put({name=module.Name})
+				end
+			end
+		end
 	end
+end	
 
-	local grid = player.get_inventory(defines.inventory.character_armor)[1].grid
-	for  i, v in pairs(armor) do
-		grid.put({name = v[1]})
-	end
+--Classic start/no cutscene/multiplayer addition
+script.on_event(defines.events.on_player_created, function(event)
+	EquipArmor(event)
+end)
 
+--Freeplay/Cutscene start
+script.on_event(defines.events.on_cutscene_cancelled, function(event)
+	EquipArmor(event)
 end)
