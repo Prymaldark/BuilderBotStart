@@ -15,6 +15,4 @@ Upgrade your engineer with Builder Bot Start. Begin the game with construction b
 
 Mod settings include number of construction robots to begin with, as well as the choice of increasing robot speed.
 
-Now includes several user configurable options, and support for Industrial Revolution.
-
 Code rework for Factorio v1.0 largely thanks to [ZeroSerenity's MegaBotStart](https://mods.factorio.com/mod/MegaBotStart).
