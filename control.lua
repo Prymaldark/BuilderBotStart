@@ -69,13 +69,13 @@ function EquipArmor(event)
 		if(n > 0)then -- we actually equipped the armor
 			local grid=ArmorInventory[1].grid
 			if script.feature_flags.space_travel then --detect if space age expansion enabled
-				for i,module in pairs(ArmorModulesA) do
+				for i,module in pairs(ArmorModulesA) do	--use loadout for space age if so
 					for y = 1, module.Count, 1 do
 						grid.put({name=module.Name})
 					end
 				end
 			else
-				for i,module in pairs(ArmorModulesB) do
+				for i,module in pairs(ArmorModulesB) do --otherwise use alternative loadout
 					for y = 1, module.Count, 1 do
 						grid.put({name=module.Name})
 					end
@@ -92,5 +92,10 @@ end)
 
 --Freeplay/Cutscene start
 script.on_event(defines.events.on_cutscene_cancelled, function(event)
+	EquipArmor(event)
+end)
+
+--Player Respawn
+script.on_event(defines.events.on_player_respawned, function(event)
 	EquipArmor(event)
 end)
