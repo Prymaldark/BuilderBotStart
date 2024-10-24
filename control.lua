@@ -13,7 +13,7 @@ local ItemPrototypes = {
 	Immunity = "belt-immunity-equipment", --1x1
 }
 
-local Items = {{ItemPrototypes["Robot"], settings.global["starting robot count"].value}}
+local Items = {{ItemPrototypes["Robot"], settings.global["starting-robot-count"].value}}
 local ArmorModules = {
 	--Vanilla, 10x10 grid
 	{Name = ItemPrototypes["Roboport"], Count = 4},
@@ -27,9 +27,9 @@ local ArmorModules = {
 
 --Freeplay
 script.on_init(function(event)
-	if not(settings.global["faster robots"].value == 0) then
+	if not(settings.global["faster-robots"].value == 0) then
 		for k,v in pairs(game.forces) do
-			for z = 1, settings.global["faster robots"].value, 1 do
+			for z = 1, settings.global["faster-robots"].value, 1 do
 				v.technologies["worker-robots-speed-" .. tostring(z)].researched = true
 			end
 		end
