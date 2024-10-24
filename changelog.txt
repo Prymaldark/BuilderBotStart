@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 2024.10.22
+  Changes:
+    - Added optional dependency on Space Age, now automatically changes reactor to fission if Space Age is not loaded, otherwise uses fusion reactor.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 2024.10.22
   Changes:
