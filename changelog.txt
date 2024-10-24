@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 2024.10.22
+  Changes:
+    - Removed dependency on Space Age, changed reactor to fission so it will work with or without Space Age.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 2024.10.22
   Changes:
