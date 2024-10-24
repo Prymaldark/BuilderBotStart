@@ -1,3 +1,4 @@
+*Now reoutfits the player on respawning.
 Upgrade your engineer with Builder Bot Start. Begin the game with construction bots from the moment you touch down on the planet to allow your focus to be your factory from step one. You did not crash here, you came with a purpose. The factory must grow. This loadout is focused on building, and does not include military features. You'll start with:
 
 * Armor
