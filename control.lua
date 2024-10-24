@@ -2,7 +2,8 @@ local ItemPrototypes = {
 	Armor = "power-armor-mk2",
 	Robot = "construction-robot",
 	Fuel = "",
-	Reactor = "fission-reactor-equipment", --4x4, 750kW
+	ReactorA = "fusion-reactor-equipment", --4x4, 2.5MW, only in space age
+	ReactorB = "fission-reactor-equipment", --4x4, 750kW
 	Exoskeleton = "exoskeleton-equipment", --2x4
 	Shield = "energy-shield-mk2-equipment", --2x2
 	Roboport = "personal-roboport-mk2-equipment", --2x2
@@ -14,10 +15,20 @@ local ItemPrototypes = {
 }
 
 local Items = {{ItemPrototypes["Robot"], settings.global["starting-robot-count"].value}}
-local ArmorModules = {
+local ArmorModulesA = {	--load when space age enabled
 	--Vanilla, 10x10 grid
 	{Name = ItemPrototypes["Roboport"], Count = 4},
-	{Name = ItemPrototypes["Reactor"], Count = 4},
+	{Name = ItemPrototypes["ReactorA"], Count = 4},
+	{Name = ItemPrototypes["Battery"], Count = 3},
+	{Name = ItemPrototypes["Panel"], Count = 1},
+	{Name = ItemPrototypes["Immunity"], Count = 1},
+	{Name = ItemPrototypes["Nightvision"], Count = 1},
+	{Name = ItemPrototypes["Exoskeleton"], Count = 1},
+}
+local ArmorModulesB = { --load when space age not enabled
+	--Vanilla, 10x10 grid
+	{Name = ItemPrototypes["Roboport"], Count = 4},
+	{Name = ItemPrototypes["ReactorB"], Count = 4},
 	{Name = ItemPrototypes["Battery"], Count = 3},
 	{Name = ItemPrototypes["Panel"], Count = 1},
 	{Name = ItemPrototypes["Immunity"], Count = 1},
@@ -57,9 +68,17 @@ function EquipArmor(event)
 		n = ArmorInventory.insert{name=ItemPrototypes["Armor"],count=1}
 		if(n > 0)then -- we actually equipped the armor
 			local grid=ArmorInventory[1].grid
-			for i,module in pairs(ArmorModules) do
-				for y = 1, module.Count, 1 do
-					grid.put({name=module.Name})
+			if script.feature_flags.space_travel then --detect if space age expansion enabled
+				for i,module in pairs(ArmorModulesA) do
+					for y = 1, module.Count, 1 do
+						grid.put({name=module.Name})
+					end
+				end
+			else
+				for i,module in pairs(ArmorModulesB) do
+					for y = 1, module.Count, 1 do
+						grid.put({name=module.Name})
+					end
 				end
 			end
 		end

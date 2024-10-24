@@ -4,7 +4,7 @@ Upgrade your engineer with Builder Bot Start. Begin the game with construction b
   * Power armor Mk.2
 * Equipment
   * 4 personal roboport Mk.2
-  * 4 portable fusion reactors
+  * 4 portable fusion reactors (will load fission reactors if space age is not activated)
   * 3 battery Mk.2
   * Exoskeleton
   * Night vision goggles
