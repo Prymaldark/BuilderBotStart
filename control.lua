@@ -195,7 +195,7 @@ function EquipArmor(event)
 				end end end end end
 			else 
 				if ((settings.global["item-quality"].value == "normal") or not(script.feature_flags.quality)) then --detect quality setting of normal
-					for i,module in pairs(ArmorModulesA) do	--use loadout for space age if so
+					for i,module in pairs(ArmorModulesB) do	--use loadout for space age if so
 						for y = 1, module.Count, 1 do
 							grid.put({name=module.Name})
 						end
