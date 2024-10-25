@@ -1,14 +1,15 @@
 {
     "name": "BuilderBotStart",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "factorio_version": "2.0",
     "dependencies": [ 
 		"base >= 2.0",
-		"? space-age >= 2.0.0"
+		"? space-age >= 2.0.0",
+		"? quality >= 2.0.0"
 	],
     "title": "Builder Bot Start",
     "author": "Prymaldark",
     "contact": "github.com/Prymaldark",
     "homepage": "github.com/Prymaldark/BuilderBotStart",
-    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots so you may concern yourself more with the design than construction of your base. This loadout is focused on building, and does not include explicitly military features.\nIncludes user configurable startup options for robot count and speed. Now also equips respawning players."
+    "description": "Upgrade your engineer with Builder Bot Start. Begin the game with construction bots so you may concern yourself more with the design than construction of your base. This loadout is focused on building, and does not include explicitly military features.\nIncludes user configurable startup options for robot count and speed, and now also quality, if available. Now also equips respawning players."
 }
