@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2024.10.24
+  Changes:
+    - Added item quality choice to mod options. 
+	- Added new loadouts to fully utilize the larger grids available in the higher quality armors.
+  To-Do:
+	- Clean up logic to remove redundancy.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 2024.10.23
   Changes:
